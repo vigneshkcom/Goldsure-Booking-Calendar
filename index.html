@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Book a quick 15-minute phone call with Goldsure — smoke alarm compliance, hot water and cooling. QLD & VIC." />
 <title>Book a Call · Goldsure</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230b0b0d'/%3E%3Ctext x='50' y='54' text-anchor='middle' dominant-baseline='central' font-family='Arial,sans-serif' font-size='52' font-weight='800' fill='%23E7C15C'%3EGS%3C/text%3E%3C/svg%3E" />
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/gs-favicon-96px.png" />
+<link rel="apple-touch-icon" href="/assets/gs-favicon-96px.png" />
 <style>*{margin:0}html,body{background:#0B0B0D}</style>
 </head>
 <body>
@@ -71,7 +72,7 @@
   .brand{display:flex;align-items:center;gap:13px;opacity:0;animation:rise .8s .05s cubic-bezier(.2,.7,.2,1) forwards}
   .mark{width:46px;height:46px;border-radius:13px;background:linear-gradient(160deg,#232228,#0a0a0b);
     display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.06)}
-  .mark svg{width:30px;height:30px;display:block}
+  .mark img{width:30px;height:30px;display:block;object-fit:contain}
   .wordmark{font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1}
   .wordmark .g{background:var(--gold-line);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .wordmark .s{color:var(--cream)}
@@ -211,16 +212,7 @@
 <div class="wrap">
   <div class="topbar">
     <div class="brand">
-      <span class="mark" aria-hidden="true">
-        <svg viewBox="0 0 100 100" fill="none">
-          <defs>
-            <linearGradient id="gsg" x1="12" y1="14" x2="86" y2="90" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#F8E39A"/><stop offset=".4" stop-color="#E7C15C"/><stop offset=".72" stop-color="#C9963C"/><stop offset="1" stop-color="#A9772A"/>
-            </linearGradient>
-          </defs>
-          <text x="50" y="50" text-anchor="middle" dominant-baseline="central" font-family="'SF Pro Display',-apple-system,'Segoe UI',Roboto,Arial,sans-serif" font-size="52" font-weight="800" letter-spacing="-2" fill="url(#gsg)">GS</text>
-        </svg>
-      </span>
+      <span class="mark"><img src="/assets/gs-favicon-96px.png" alt="Goldsure" /></span>
       <span class="wordmark"><span class="g">Gold</span><span class="s">sure</span></span>
     </div>
     <div class="calls">
