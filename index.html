@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Book your Goldsure appointment — licensed smoke alarm compliance, hot water and cooling. QLD & VIC." />
+<title>Book an Appointment · Goldsure</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230b0b0d'/%3E%3Ctext x='50' y='54' text-anchor='middle' dominant-baseline='central' font-family='Arial,sans-serif' font-size='52' font-weight='800' fill='%23E7C15C'%3EGS%3C/text%3E%3C/svg%3E" />
+<style>*{margin:0}html,body{background:#0B0B0D}</style>
+</head>
+<body>
+<style>
+  :root{
+    --ink:#0B0B0D;
+    --ink-2:#111014;
+    --surface:#17161B;
+    --surface-2:#1E1D23;
+    --line:rgba(233,214,138,0.14);
+    --line-soft:rgba(255,255,255,0.07);
+    --cream:#F3EEE2;
+    --cream-dim:#CFC8B8;
+    --muted:#8C877B;
+    --gold-1:#F8E39A;
+    --gold-2:#E7C15C;
+    --gold-3:#C9963C;
+    --gold-4:#A9772A;
+    --gold-line:linear-gradient(135deg,#F8E39A 0%,#E7C15C 34%,#C9963C 68%,#A9772A 100%);
+    --panel:#FBFAF7;
+    --panel-line:#ECE7DB;
+    --panel-ink:#201E1A;
+    --panel-muted:#8B8578;
+    --r:18px;
+    --maxw:1120px;
+    color-scheme:dark;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--ink);
+    color:var(--cream);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+    position:relative;
+    min-height:100vh;
+  }
+
+  /* ── Ambient background ─────────────────────────────── */
+  .bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:
+      radial-gradient(1200px 700px at 50% -10%,rgba(231,193,92,0.10),transparent 60%),
+      radial-gradient(900px 900px at 100% 0%,rgba(169,119,42,0.10),transparent 55%),
+      var(--ink);}
+  .glow{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;mix-blend-mode:screen}
+  .glow.a{width:520px;height:520px;left:-140px;top:-120px;background:radial-gradient(circle,rgba(248,227,154,.30),transparent 65%);animation:drift1 22s ease-in-out infinite}
+  .glow.b{width:620px;height:620px;right:-180px;top:8%;background:radial-gradient(circle,rgba(201,150,60,.28),transparent 65%);animation:drift2 28s ease-in-out infinite}
+  .glow.c{width:480px;height:480px;left:38%;bottom:-160px;background:radial-gradient(circle,rgba(231,193,92,.18),transparent 65%);animation:drift3 26s ease-in-out infinite}
+  .grain{position:absolute;inset:0;opacity:.05;background-image:radial-gradient(rgba(255,255,255,.9) .5px,transparent .5px);background-size:3px 3px}
+  @keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,50px)}}
+  @keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(-70px,40px)}}
+  @keyframes drift3{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-50px)}}
+
+  /* ── Shell ──────────────────────────────────────────── */
+  .wrap{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:28px 24px 64px}
+
+  /* ── Brand lockup ───────────────────────────────────── */
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{display:flex;align-items:center;gap:13px;opacity:0;animation:rise .8s .05s cubic-bezier(.2,.7,.2,1) forwards}
+  .mark{width:46px;height:46px;border-radius:13px;background:linear-gradient(160deg,#232228,#0a0a0b);
+    display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.06)}
+  .mark svg{width:30px;height:30px;display:block}
+  .wordmark{font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1}
+  .wordmark .g{background:var(--gold-line);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .wordmark .s{color:var(--cream)}
+  .calls{display:flex;gap:8px;opacity:0;animation:rise .8s .12s cubic-bezier(.2,.7,.2,1) forwards}
+  .call{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:var(--cream-dim);
+    text-decoration:none;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.02);
+    transition:border-color .25s,color .25s,transform .25s}
+  .call:hover{border-color:rgba(233,214,138,.4);color:var(--gold-1);transform:translateY(-1px)}
+  .call svg{width:15px;height:15px;stroke:var(--gold-2)}
+  .call .st{color:var(--gold-1);font-weight:800;letter-spacing:.02em}
+
+  /* ── Hero ───────────────────────────────────────────── */
+  .hero{text-align:center;padding:52px 0 30px}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;font-weight:700;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--gold-2);margin-bottom:22px;
+    opacity:0;animation:rise .8s .18s cubic-bezier(.2,.7,.2,1) forwards}
+  .eyebrow::before,.eyebrow::after{content:"";width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-3))}
+  .eyebrow::after{background:linear-gradient(90deg,var(--gold-3),transparent)}
+  h1{font-size:clamp(38px,6.6vw,72px);font-weight:800;letter-spacing:-.03em;line-height:1.02;text-wrap:balance;
+    opacity:0;animation:rise .9s .24s cubic-bezier(.2,.7,.2,1) forwards}
+  h1 .grad{position:relative;background:var(--gold-line);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-size:200% 100%;animation:shimmer 6s linear infinite}
+  @keyframes shimmer{0%{background-position:0% 0}100%{background-position:200% 0}}
+  .lede{max-width:56ch;margin:22px auto 0;font-size:clamp(15px,1.7vw,18px);color:var(--cream-dim);line-height:1.6;
+    opacity:0;animation:rise .9s .32s cubic-bezier(.2,.7,.2,1) forwards}
+
+  /* ── Trust strip ────────────────────────────────────── */
+  .trust{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:30px auto 0;max-width:820px}
+  .trust li{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--cream-dim);
+    padding:9px 14px;border-radius:999px;border:1px solid var(--line-soft);background:rgba(255,255,255,.025);
+    opacity:0;animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
+  .trust li:nth-child(1){animation-delay:.40s}
+  .trust li:nth-child(2){animation-delay:.47s}
+  .trust li:nth-child(3){animation-delay:.54s}
+  .trust li:nth-child(4){animation-delay:.61s}
+  .trust svg{width:16px;height:16px;stroke:var(--gold-2);flex:none}
+
+  /* ── Booking panel ──────────────────────────────────── */
+  .booking{margin-top:44px;opacity:0;animation:rise 1s .6s cubic-bezier(.2,.7,.2,1) forwards}
+  .card{background:var(--panel);border-radius:24px;overflow:hidden;position:relative;
+    box-shadow:0 30px 80px -30px rgba(0,0,0,.75),0 2px 0 rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.06)}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold-line);z-index:3}
+  .card-head{padding:26px 30px 22px;border-bottom:1px solid var(--panel-line);background:linear-gradient(180deg,#fff,#faf8f3);
+    display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .card-head h2{color:var(--panel-ink);font-size:20px;font-weight:800;letter-spacing:-.02em}
+  .card-head p{color:var(--panel-muted);font-size:13.5px;margin-top:3px}
+  .steps{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--panel-muted)}
+  .steps .dot{display:inline-flex;align-items:center;gap:7px}
+  .steps .num{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:11px;color:#fff;
+    background:linear-gradient(160deg,var(--gold-2),var(--gold-4));box-shadow:0 2px 6px rgba(169,119,42,.4)}
+  .steps .num.off{background:#E7E1D4;color:var(--panel-muted);box-shadow:none}
+  .steps .sep{width:16px;height:1px;background:var(--panel-line)}
+
+  .cal-stack{position:relative;min-height:660px;background:var(--panel)}
+  .cal-frame{position:absolute;inset:0;width:100%;height:100%;border:0;opacity:0;background:#fff}
+  body.widget-ok .cal-frame{position:relative;opacity:1;height:auto;min-height:660px}
+  body.widget-ok .cal-mock{display:none}
+  body.widget-blocked .cal-frame{display:none}
+
+  /* ── Mock calendar (preview skeleton / graceful fallback) ── */
+  .cal-mock{position:absolute;inset:0;display:grid;grid-template-columns:1.15fr .85fr;gap:0;color:var(--panel-ink)}
+  .cal-left{padding:26px 30px}
+  .cal-right{padding:26px 30px;border-left:1px solid var(--panel-line);background:#FCFBF8;display:flex;flex-direction:column}
+  .cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+  .cal-nav .m{font-size:17px;font-weight:800;letter-spacing:-.01em}
+  .cal-nav .arw{display:flex;gap:8px}
+  .cal-nav button{width:34px;height:34px;border-radius:10px;border:1px solid var(--panel-line);background:#fff;color:var(--panel-ink);
+    cursor:pointer;display:grid;place-items:center;transition:background .2s,border-color .2s}
+  .cal-nav button:hover{background:#faf6ec;border-color:var(--gold-3)}
+  .cal-nav svg{width:15px;height:15px;stroke:currentColor}
+  .dow{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:8px}
+  .dow span{text-align:center;font-size:11px;font-weight:700;color:var(--panel-muted);letter-spacing:.04em}
+  .days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+  .days button{aspect-ratio:1;border:0;background:transparent;border-radius:11px;font-size:14px;font-weight:600;
+    color:var(--panel-ink);cursor:pointer;font-variant-numeric:tabular-nums;transition:background .18s,color .18s,transform .18s;position:relative}
+  .days button.mute{color:#C9C2B4;cursor:default}
+  .days button.avail:hover{background:#F6EFDD}
+  .days button.today{box-shadow:inset 0 0 0 1.5px var(--gold-3)}
+  .days button.sel{background:linear-gradient(160deg,var(--gold-2),var(--gold-4));color:#fff;font-weight:800;
+    box-shadow:0 6px 16px -4px rgba(169,119,42,.55);transform:translateY(-1px)}
+  .days button.dis{color:#D9D3C6;text-decoration:line-through;cursor:default}
+
+  .cal-right .rh{font-size:13px;font-weight:800;color:var(--panel-ink);margin-bottom:2px}
+  .cal-right .rs{font-size:12.5px;color:var(--panel-muted);margin-bottom:16px}
+  .slots{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .slots button{padding:11px 8px;border-radius:11px;border:1px solid var(--panel-line);background:#fff;color:var(--panel-ink);
+    font-size:13.5px;font-weight:700;cursor:pointer;font-variant-numeric:tabular-nums;transition:border-color .18s,background .18s,color .18s}
+  .slots button:hover{border-color:var(--gold-3);background:#faf6ec}
+  .slots button.sel{background:linear-gradient(160deg,var(--gold-2),var(--gold-4));color:#fff;border-color:transparent;
+    box-shadow:0 6px 16px -5px rgba(169,119,42,.55)}
+  .confirm{margin-top:auto;padding-top:18px}
+  .confirm button{width:100%;padding:14px;border:0;border-radius:13px;cursor:pointer;color:#231a08;font-size:15px;font-weight:800;
+    letter-spacing:-.01em;background:var(--gold-line);box-shadow:0 12px 26px -10px rgba(201,150,60,.7);
+    transition:transform .2s,box-shadow .2s;display:inline-flex;align-items:center;justify-content:center;gap:9px}
+  .confirm button:hover{transform:translateY(-2px);box-shadow:0 18px 34px -12px rgba(201,150,60,.85)}
+  .confirm button svg{width:17px;height:17px;stroke:#231a08}
+  .confirm .fine{text-align:center;font-size:11.5px;color:var(--panel-muted);margin-top:11px}
+  .preview-tag{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:4;
+    font-size:11px;font-weight:600;color:var(--panel-muted);background:rgba(255,255,255,.86);border:1px solid var(--panel-line);
+    padding:5px 12px;border-radius:999px;backdrop-filter:blur(4px);display:none}
+  body.widget-blocked .preview-tag{display:block}
+
+  /* ── Footer ─────────────────────────────────────────── */
+  footer{margin-top:40px;text-align:center;color:var(--muted);font-size:13px;
+    opacity:0;animation:rise 1s .8s cubic-bezier(.2,.7,.2,1) forwards}
+  footer .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 20px;margin-bottom:12px}
+  footer .row a{color:var(--cream-dim);text-decoration:none;font-weight:600;transition:color .2s}
+  footer .row a:hover{color:var(--gold-1)}
+  footer .st{color:var(--gold-2);margin-right:4px}
+  footer .fine{font-size:12px;color:#5f5b53}
+  .hr{height:1px;max-width:120px;margin:0 auto 18px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+  @media (max-width:760px){
+    .wrap{padding:22px 16px 48px}
+    .hero{padding:34px 0 22px}
+    .cal-mock{grid-template-columns:1fr}
+    .cal-right{border-left:0;border-top:1px solid var(--panel-line)}
+    .cal-stack{min-height:0}
+    .steps{display:none}
+    .call .no{display:none}
+    .wordmark{font-size:23px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .brand,.call,.eyebrow,h1,.lede,.trust li,.booking,footer{opacity:1!important;transform:none!important}
+  }
+</style>
+
+<div class="bg" aria-hidden="true">
+  <span class="glow a"></span><span class="glow b"></span><span class="glow c"></span>
+  <span class="grain"></span>
+</div>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none">
+          <defs>
+            <linearGradient id="gsg" x1="12" y1="14" x2="86" y2="90" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F8E39A"/><stop offset=".4" stop-color="#E7C15C"/><stop offset=".72" stop-color="#C9963C"/><stop offset="1" stop-color="#A9772A"/>
+            </linearGradient>
+          </defs>
+          <text x="50" y="50" text-anchor="middle" dominant-baseline="central" font-family="'SF Pro Display',-apple-system,'Segoe UI',Roboto,Arial,sans-serif" font-size="52" font-weight="800" letter-spacing="-2" fill="url(#gsg)">GS</text>
+        </svg>
+      </span>
+      <span class="wordmark"><span class="g">Gold</span><span class="s">sure</span></span>
+    </div>
+    <div class="calls">
+      <a class="call" href="tel:+61721455155">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="lbl"><b class="st">QLD</b> <span class="no">(07) 2145 5155</span></span>
+      </a>
+      <a class="call" href="tel:+61370502846">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="lbl"><b class="st">VIC</b> <span class="no">(03) 7050 2846</span></span>
+      </a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <p class="eyebrow">Goldsure&nbsp;Pty&nbsp;Ltd</p>
+    <h1>Book your <span class="grad">appointment</span></h1>
+    <p class="lede">Choose a time that suits you and our licensed team takes care of the rest — smoke alarm compliance, hot water and cooling, done properly the first time.</p>
+    <ul class="trust">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Fully licensed &amp; insured</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Smoke alarm compliance experts</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.6 6.8L12 17l-6.1 3.5 1.6-6.8L2 9.1l7-.6L12 2z"/></svg>5-star rated service</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>Fast, on-time bookings</li>
+    </ul>
+  </section>
+
+  <section class="booking">
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>Schedule your visit</h2>
+          <p>Pick a date and time — you'll get an instant confirmation.</p>
+        </div>
+        <div class="steps" aria-hidden="true">
+          <span class="dot"><span class="num">1</span>Date</span><span class="sep"></span>
+          <span class="dot"><span class="num">2</span>Time</span><span class="sep"></span>
+          <span class="dot"><span class="num off">3</span>Details</span>
+        </div>
+      </div>
+
+      <div class="cal-stack">
+        <!-- Real Goldsure booking widget (loads on booking.goldsure.com.au) -->
+        <iframe class="cal-frame" src="https://api.leadconnectorhq.com/widget/booking/udRwQGz9i7JY4zRYRQyc"
+                id="udRwQGz9i7JY4zRYRQyc_1783658823824" scrolling="no" title="Goldsure booking calendar"></iframe>
+
+        <!-- In-brand fallback shown only if the live widget can't load (e.g. in this preview) -->
+        <div class="cal-mock" aria-hidden="true">
+          <div class="cal-left">
+            <div class="cal-nav">
+              <span class="m" id="mockMonth">July 2026</span>
+              <span class="arw">
+                <button type="button" aria-label="Previous month"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+                <button type="button" aria-label="Next month"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+              </span>
+            </div>
+            <div class="dow"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+            <div class="days" id="mockDays"></div>
+          </div>
+          <div class="cal-right">
+            <div class="rh">Available times</div>
+            <div class="rs" id="mockDate">Wed, 15 July 2026</div>
+            <div class="slots" id="mockSlots"></div>
+            <div class="confirm">
+              <button type="button"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Confirm booking</button>
+              <p class="fine">Free · takes under a minute · instant confirmation</p>
+            </div>
+          </div>
+        </div>
+        <div class="preview-tag">Live booking calendar appears here once deployed to booking.goldsure.com.au</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="hr"></div>
+    <div class="row">
+      <a href="tel:+61721455155"><b class="st">QLD</b> (07) 2145 5155</a>
+      <a href="tel:+61370502846"><b class="st">VIC</b> (03) 7050 2846</a>
+      <a href="https://www.goldsure.com.au">goldsure.com.au</a>
+    </div>
+    <div class="row"><span>Mon–Fri · 8am–5pm</span></div>
+    <p class="fine">© 2026 Goldsure Pty Ltd · Licensed electrical &amp; smoke alarm compliance</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  // ── Build the fallback mock calendar (only visible if the live widget is blocked) ──
+  var days = document.getElementById('mockDays');
+  if(days){
+    // July 2026 starts on a Wednesday; 31 days. Grid is Mon-first.
+    var lead = 2;            // Mon,Tue before Wed 1
+    var selected = 15, today = 10;
+    for(var i=0;i<lead;i++){ var b=document.createElement('button'); b.className='mute'; b.type='button'; b.textContent=(28+i); days.appendChild(b); }
+    for(var d=1; d<=31; d++){
+      var btn=document.createElement('button'); btn.type='button'; btn.textContent=d;
+      var weekday=(lead+d-1)%7;                 // 0=Mon .. 6=Sun
+      if(d<today || weekday>4){ btn.className='dis'; }   // past days + weekends unavailable
+      else{ btn.className='avail'; if(d===today) btn.classList.add('today'); }
+      if(d===selected){ btn.className='sel'; }
+      days.appendChild(btn);
+    }
+    var trail=42-(lead+31);
+    for(var t=1;t<=trail;t++){ var m=document.createElement('button'); m.className='mute'; m.type='button'; m.textContent=t; days.appendChild(m); }
+  }
+  var slots=document.getElementById('mockSlots');
+  if(slots){
+    var times=['8:00 am','9:30 am','11:00 am','1:00 pm','2:30 pm','4:00 pm'];
+    times.forEach(function(tm,i){ var b=document.createElement('button'); b.type='button'; b.textContent=tm; if(i===2) b.className='sel'; slots.appendChild(b); });
+  }
+
+  // ── Decide whether the live LeadConnector widget can load ──
+  // On booking.goldsure.com.au the embed script loads → real calendar shows.
+  // In a locked-down preview the external script is blocked → mock shows.
+  var decided=false;
+  function set(cls){ if(decided) return; decided=true; document.body.classList.add(cls); }
+  var s=document.createElement('script');
+  s.src='https://link.msgsndr.com/js/form_embed.js';
+  s.async=true;
+  s.onload=function(){ set('widget-ok'); };
+  s.onerror=function(){ set('widget-blocked'); };
+  document.head.appendChild(s);
+  setTimeout(function(){ set('widget-blocked'); }, 2600);
+})();
+</script>
+</body>
+</html>
